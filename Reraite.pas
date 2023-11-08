@@ -1,4 +1,4 @@
-﻿program Reraite;
+program Reraite;
 const
    n = 3; {От скольки совпадающий в паре предложений слов пара выведится пользователю}
 type
@@ -119,8 +119,11 @@ begin
 end;
 
 begin
-   Assign(f, 'case_text.txt');
-   Assign(output, 'res2.txt');
+  
+   {1} {Создаём табличку со словами, и с информацией,
+   в каких предложениях данное слово встречается}
+   Assign(f, 'case_text.txt'); {Файлик с предложениями}
+   Assign(output, 'res2.txt'); {Файлик для вывода}
    Reset(f);
    while not eof(f) do begin
       Readln(f, s);
@@ -135,11 +138,16 @@ begin
       end;
    end;
    Close(f);
+   
+   {2} {Считаем количество совпадающих слов для каждой пары предложений}
    SetLength(a, count, count);
    for pos := 0 to Length(Table) - 1 do
       foreach i in Table[pos].data do
          foreach j in Table[pos].data do
             a[i - 1, j - 1] := a[i - 1, j - 1] + 1;
+         
+   {3} {Вывод пары предложений-рерайтов в зависимости от параметра n, который отвечает,
+   от какого количества совпадающих слов пара предложений считается рерайтом}
    for i := 0 to count - 1 do
       for j := i + 1 to count - 1 do
          if a[i, j] > n then begin
