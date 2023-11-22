@@ -5,7 +5,7 @@
 
 1 способ(Pascal) - файл Reraite.pas, выходной файл res.txt
 
-2 способ(Python) - файл reWrite_check.py, выходной файл reWrite_check_end.txt
+2 способ(Python) - файл reWrite_check.py, доп. файлы: prist.txt, suf.txt, end.txt, sort.txt, выходной файл reWrite_check_end.txt
 
 3 способ(Python) - файл 1.py, выходной файл itog1.txt
 
