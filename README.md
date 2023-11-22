@@ -1,5 +1,6 @@
 # Talent_Case_Ctrl-Alt-Win
 Решение кейса
+
 Файл case.txt - исходный датасет, в методах 3-5 можно использовать sample.json
 
 1 способ(Pascal) - файл Reraite.pas, выходной файл res.txt
